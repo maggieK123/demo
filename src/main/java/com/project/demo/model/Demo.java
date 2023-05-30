@@ -11,7 +11,7 @@ public class Demo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String address;
+    private String password;
 
     public Demo() {
     }
@@ -33,10 +33,10 @@ public class Demo {
     }
 
     public String getAddress() {
-        return address;
+        return password;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.password = address;
     }
 }
