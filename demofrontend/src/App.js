@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Sign from './components/signin'
+import Opening from './components/Opening'
+import { AppBar,Toolbar,IconButton,Typography} from "@mui/material";
 
-function App() {
+import { ThemeProvider } from '@mui/material/styles';
+
+import { createTheme } from '@mui/material';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#6B8E23'
+    }
+  }
+});
+
+const App = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <AppBar position = "static" color='primary'>
+      <Toolbar>
+
+</Toolbar>
+      </AppBar>
+      <br></br>
+        <Sign/>
+    </ThemeProvider>
+    
   );
 }
 
