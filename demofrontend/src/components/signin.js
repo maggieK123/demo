@@ -1,9 +1,9 @@
-import { Box, Container, Typography, TextField, FormControlLabel, Checkbox, Button, Link, Grid} from "@mui/material";
+import { Box, Container, Typography, TextField, FormControlLabel, Checkbox, Button, Grid} from "@mui/material";
+import { useNavigate, Link } from "react-router-dom";
 
 
-
-
-export default function signin(){
+export default function Signin(){
+    const nav = useNavigate()
     return (
         <Container component='main' maxWidth = 'xs'>
          <Typography component="h1" variant="h5" align="center">
@@ -36,8 +36,8 @@ export default function signin(){
                 Sign In
             </Button>
             <br></br>
-            <Link>
-            {'Dont have an account? Sign Up'}
+            <Link to = '/signup'>
+                signup
             </Link>
             </Grid>
             

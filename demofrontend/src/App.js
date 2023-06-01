@@ -1,11 +1,12 @@
 import './App.css';
-import Sign from './components/signin'
-import Opening from './components/Opening'
+import Sign from './components/signin';
+import Up from './components/signup';
 import { AppBar,Toolbar,IconButton,Typography} from "@mui/material";
 
 import { ThemeProvider } from '@mui/material/styles';
 
 import { createTheme } from '@mui/material';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
@@ -22,10 +23,18 @@ const App = () => {
       <AppBar position = "static" color='primary'>
       <Toolbar>
 
-</Toolbar>
+      </Toolbar>
       </AppBar>
       <br></br>
-        <Sign/>
+      <Router>
+        <Routes>
+          <Route path = '/' element ={<Sign/>} />
+          <Route path = '/signup' element = {<Up/>} />
+        </Routes>
+      </Router>
+      
+      
+        
     </ThemeProvider>
     
   );
