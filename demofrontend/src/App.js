@@ -1,6 +1,7 @@
 import './App.css';
 import Sign from './components/signin';
 import Up from './components/signup';
+import Home from './components/home';
 import { AppBar,Toolbar,IconButton,Typography} from "@mui/material";
 
 import { ThemeProvider } from '@mui/material/styles';
@@ -30,6 +31,7 @@ const App = () => {
         <Routes>
           <Route path = '/' element ={<Sign/>} />
           <Route path = '/signup' element = {<Up/>} />
+          <Route path = '/home' element = {<Home/>} />
         </Routes>
       </Router>
       
